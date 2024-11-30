@@ -10,9 +10,9 @@
 
 JDBC是用Java语言操作关系型数据库的一套API***（面向接口编程）***
 
-[![image-20241129220215345](images\image-20241129220215345.png)](https://markdown.com.cn/basic-syntax/code.html)
+![image-20241129220215345](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241129220215345.png)
 
-![image-20241129220621969](images\image-20241129220621969.png)
+![image-20241129220621969](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241129220621969.png)
 
 ```java
 package com.wanf2004.jdbc;
@@ -60,9 +60,9 @@ public class JDBCDemo {
 
 ## 02 DriverManager
 
-![image-20241129232441132](images\image-20241129232441132.png)
+![image-20241129232441132](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241129232441132.png)
 
-![image-20241129232655408](images\image-20241129232655408.png)
+![image-20241129232655408](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241129232655408.png)
 
 ```java
 package com.wanf2004.jdbc;
@@ -113,15 +113,15 @@ public class JDBCDemo {
 
 ## 03 Connection
 
-![image-20241129233228959](images\image-20241129233228959.png)
+![image-20241129233228959](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241129233228959.png)
 
-![image-20241129233351254](images\image-20241129233351254.png)
+![image-20241129233351254](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241129233351254.png)
 
 ### 示例
 
 1. 初始化Account表如下
 
-![image-20241130001102915](images\image-20241130001102915.png)
+![image-20241130001102915](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130001102915.png)
 
 2. 执行以下Java代码*（关闭自动提交）*
 
@@ -259,7 +259,7 @@ public class JDBCDemo {
 由于开启了自动提交，在sql1执行完后提交了新表项，sql1和sql2之间出现异常，sql2不执行
 因此执行完这段代码后Account表为
 
-![image-20241130002148536](images\image-20241130002148536.png)
+![image-20241130002148536](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130002148536.png)
 
 
 
@@ -267,7 +267,7 @@ public class JDBCDemo {
 
 ## 04 Statement
 
-![image-20241130002355621](images\image-20241130002355621.png)
+![image-20241130002355621](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130002355621.png)
 
 ### 1. 测试DML语句：count返回影响的行数
 
@@ -347,7 +347,7 @@ public class JDBCDemo {
 
 数据库中创建了db1
 
-![image-20241130005724000](images\image-20241130005724000.png)
+![image-20241130005724000](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130005724000.png)
 
 #### count返回0：
 
@@ -358,7 +358,7 @@ String sql = "drop database db1";
 
 数据库db1被删除
 
-![image-20241130005856609](images\image-20241130005856609.png)
+![image-20241130005856609](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130005856609.png)
 
 
 
@@ -370,7 +370,7 @@ String sql = "drop database db1";
 
 > Statement执行executeQuery(sql)后的返回值
 
-![image-20241130010524539](images\image-20241130010524539.png)
+![image-20241130010524539](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130010524539.png)
 
 ```java
     /**
@@ -432,13 +432,13 @@ String sql = "drop database db1";
 
 测试结果如下：
 
-![image-20241130013331730](images\image-20241130013331730.png)
+![image-20241130013331730](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130013331730.png)
 
 ### Task
 
 **需求：查询account账户表数据，封装为Account对象中，并且存储到ArrayList中**
 
-![image-20241130013451969](images\image-20241130013451969.png)
+![image-20241130013451969](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130013451969.png)
 
 ### Solution
 
@@ -546,7 +546,7 @@ public class Account {
 
 测试结果：
 
-![image-20241130014559990](images\image-20241130014559990.png)
+![image-20241130014559990](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130014559990.png)
 
 
 
@@ -556,13 +556,13 @@ public class Account {
 
 ## 06 PreparedStatement
 
-![image-20241130015014887](images\image-20241130015014887.png)
+![image-20241130015014887](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130015014887.png)
 
 ### （1）SQL注入演示
 
 首先创建一张user table
 
-![image-20241130021917315](images\image-20241130021917315.png)
+![image-20241130021917315](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130021917315.png)
 
 接着在测试方法里尝试登录
 
@@ -640,7 +640,7 @@ if (resultSet.next()) {
 System.out.println(sql);
 ```
 
-![image-20241130023538711](images\image-20241130023538711.png)
+![image-20241130023538711](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130023538711.png)
 
 我们发现 sql语句中 where部分恒为true
 **因此只要数据库中tb_user不为空 resultSet就不可能为空！！！**
@@ -651,7 +651,7 @@ System.out.println(sql);
 
 ### （2）解决方法：PreparedStatement
 
-![image-20241130024007452](images\image-20241130024007452.png)
+![image-20241130024007452](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130024007452.png)
 
 
 
@@ -714,7 +714,7 @@ public void TestLogin_PreventInject() throws Exception {
 
 ### （3）PreparedStatement原理
 
-![image-20241130030831992](images\image-20241130030831992.png)
+![image-20241130030831992](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130030831992.png)
 
 省流：设置url时加入useServerPrepStmts=true开启预编译功能
 
@@ -741,13 +741,13 @@ String url = "jdbc:mysql:///hpgc_jdbc?useServerPrepStmts=true";
 
 ### 我的作业不需要 所以这一块我没有实现 感兴趣可以自己动手敲
 
-![image-20241130033125070](images\image-20241130033125070.png)
+![image-20241130033125070](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130033125070.png)
 
 
 
-![image-20241130033638398](images\image-20241130033638398.png)
+![image-20241130033638398](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130033638398.png)
 
-![image-20241130033700305](images\image-20241130033700305.png)
+![image-20241130033700305](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130033700305.png)
 
 
 
@@ -763,13 +763,13 @@ String url = "jdbc:mysql:///hpgc_jdbc?useServerPrepStmts=true";
 
 ### Task
 
-![image-20241130035652850](images\image-20241130035652850.png)
+![image-20241130035652850](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130035652850.png)
 
 
 
 ### （1）环境准备
 
-![image-20241130035828610](images\image-20241130035828610.png)
+![image-20241130035828610](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130035828610.png)
 
 #### 数据库表tb_brand
 
@@ -795,7 +795,7 @@ INSERT INTO tb_brand VALUES
 
 SELECT * FROM tb_brand;
 
-![image-20241130041512282](images\image-20241130041512282.png)
+![image-20241130041512282](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130041512282.png)
 
 #### 实体类Brand
 
@@ -885,11 +885,11 @@ public class Brand {
 
 #### 测试用例
 
-![image-20241130042654097](images\image-20241130042654097.png)
+![image-20241130042654097](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130042654097.png)
 
 项目结构：
 
-![image-20241130042631575](images\image-20241130042631575.png)
+![image-20241130042631575](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130042631575.png)
 
 
 
@@ -968,7 +968,7 @@ public class BrandTest {
 
 测试结果：
 
-![image-20241130045958149](images\image-20241130045958149.png)
+![image-20241130045958149](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130045958149.png)
 
 ### （3）添加 修改 删除
 
@@ -1270,16 +1270,16 @@ public class BrandTest {
 
 我用@Test注解表明的方法类中包含Scanner对象 但是无法在控制台输入
 
-![image-20241130052713722](images\image-20241130052713722.png)
+![image-20241130052713722](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130052713722.png)
 
 
 
 解决方案：参考[IDEA中@Test测试Scanner无法在控制台输入的问题-CSDN博客](https://blog.csdn.net/qq_33406883/article/details/116305990)
 
 1. 帮助中打开选项：编辑自定义虚拟机选项
-   ![image-20241130052842893](images\image-20241130052842893.png)
+   ![image-20241130052842893](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130052842893.png)
 
 2. 添加一句话：-Deditable.java.test.console=true
-   ![image-20241130053031584](images\image-20241130053031584.png)
+   ![image-20241130053031584](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130053031584.png)
 3. 重启后 成功输入！
-   ![image-20241130054033443](images\image-20241130054033443.png)
+   ![image-20241130054033443](https://github.com/ltangdz/JDBC_Demo/blob/main/JDBC/doc/images/image-20241130054033443.png)
